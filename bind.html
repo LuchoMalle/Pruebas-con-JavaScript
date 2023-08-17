@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let user = {
+  firstName: "John",
+  say(time, phrase) {
+    alert(`[${time}] ${this.firstName}: ${phrase}!`);
+  }
+};
+
+let say = user.say.bind(user);
+
+say(new Date().getHours() + ':' + new Date().getMinutes(),"Hello"); // Hello, John! ("Hello" argument is passed to say)
+say(new Date().getHours() + ':' + new Date().getMinutes(),"Bye"); // Bye, John! ("Bye" is passed to say)
+    </script>
+</body>
+</html>

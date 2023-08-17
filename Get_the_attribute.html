@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+  <div data-widget-name="menu">Choose the genre</div>
+
+  <script>
+    let divData = document.querySelector('[data-widget-name]');
+    console.log(divData.innerText)
+    // reading the value
+    alert(divData.dataset.widgetName);
+    // or
+    alert(divData.getAttribute('data-widget-name'));
+  </script>
+</body>
+</html>
