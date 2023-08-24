@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #numeros{
+            overflow-wrap: break-word;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Ingresar número del 1 al 100</h2>
+    <input id="input" type="number" min="1" max="100" placeholder="1-100">
+    <button onclick="imprimirNumeros()">press</button>
+    <p id="numeros"></p>
+    <script>
+        function imprimirNumeros() {
+            numeros.innerHTML = "";
+            let array = [];
+        
+            for (let i = 1; i <= input.valueAsNumber; i++) {
+                array.push(i);
+            }
+            array.map(elem=>{
+                let num = document.createElement("span");
+                num.innerText = elem;
+                numeros.append(num);
+            });
+        }
+    </script>
+</body>
+
+</html>
